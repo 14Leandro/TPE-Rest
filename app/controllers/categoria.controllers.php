@@ -25,7 +25,7 @@ class CategoriaApiController {
         $this->view->response($categorias);
     }
 
-    public function getCategorias($params = null) {
+    public function getCategoria($params = null) {
         // obtengo el id del arreglo de params
         $id = $params[':ID'];
         $categoria = $this->model->get($id);

@@ -36,7 +36,7 @@ class CategoriaModel {
      * Inserta una categoria en la base de datos.
      */
     public function insert($nombre, $imagen) {
-        $query = $this->db->prepare("INSERT INTO task (nombre, categoria) VALUES (?, ?)");
+        $query = $this->db->prepare("INSERT INTO categorias (nombre, categoria) VALUES (?, ?)");
         $query->execute([$nombre, $imagen]);
 
         return $this->db->lastInsertId();
