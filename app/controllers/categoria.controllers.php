@@ -2,7 +2,7 @@
 require_once './app/models/categoria.model.php';
 require_once './app/views/categoria.view.php';
 
-class TaskApiController {
+class CategoriaApiController {
     private $model;
     private $view;
 
@@ -10,7 +10,7 @@ class TaskApiController {
 
     public function __construct() {
         $this->model = new CategoriaModel();
-        $this->view = new CategoriaView();
+        $this->view = new ApiView();
         
         // lee el body del request
         $this->data = file_get_contents("php://input");

@@ -6,10 +6,10 @@ require_once './app/controllers/categoria.controller.php';
 $router = new Router();
 
 // defina la tabla de ruteo
-$router->addRoute('tasks', 'GET', 'TaskApiController', 'getTasks');
-$router->addRoute('tasks/:ID', 'GET', 'TaskApiController', 'getTask');
-$router->addRoute('tasks/:ID', 'DELETE', 'TaskApiController', 'deleteTask');
-$router->addRoute('tasks', 'POST', 'TaskApiController', 'insertTask'); 
+$router->addRoute('categorias', 'GET', 'CategoriaApiController', 'getCategorias');
+$router->addRoute('categorias/:ID', 'GET', 'CategoriaApiController', 'getCategoria');
+$router->addRoute('categorias/:ID', 'DELETE', 'CategoriaApiController', 'deleteCategoria');
+$router->addRoute('categorias', 'POST', 'CategoriaApiController', 'insertCategoria'); 
 
 // ejecuta la ruta (sea cual sea)
 $router->route($_GET["resource"], $_SERVER['REQUEST_METHOD']);
